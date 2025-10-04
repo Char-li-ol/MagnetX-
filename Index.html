@@ -1,0 +1,474 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>MagnetX — Join the Community</title>
+  <meta name="description" content="MagnetX — a home for builders, dreamers and doers shaping Web3. Join our community." />
+  <style>
+    /* Simple, modern styles */
+    :root{
+      --accent:#0ea5a4;
+      --bg:#0f172a;
+      --card:#0b1220;
+      --muted:#94a3b8;
+      --glass: rgba(255,255,255,0.03);
+      font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      background:linear-gradient(180deg,#07102a 0%, #031028 100%);
+      color:#e6eef6;
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+      line-height:1.45;
+      padding:36px 20px;
+      min-height:100vh;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+    }
+    .container{
+      width:100%;
+      max-width:980px;
+      background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+      border-radius:14px;
+      box-shadow:0 8px 30px rgba(2,6,23,0.6);
+      padding:28px;
+      display:grid;
+      grid-template-columns: 1fr 420px;
+      gap:28px;
+      align-items:start;
+    }
+    header h1{
+      font-size:1.6rem;
+      margin:0 0 8px 0;
+      letter-spacing:-0.01em;
+    }
+    header p{color:var(--muted); margin:0 0 18px 0}
+    .cta{
+      display:inline-flex;
+      gap:10px;
+      align-items:center;
+      margin-top:8px;
+    }
+    .btn{
+      background:var(--accent);
+      color:#042024;
+      padding:10px 14px;
+      border-radius:10px;
+      border:none;
+      font-weight:600;
+      cursor:pointer;
+      text-decoration:none;
+      display:inline-block;
+    }
+    .ghost{
+      background:transparent;
+      border:1px solid rgba(255,255,255,0.06);
+      color:var(--muted);
+      padding:8px 12px;
+      border-radius:10px;
+      cursor:pointer;
+    }
+
+    /* Form card */
+    .card{
+      background:linear-gradient(180deg, rgba(255,255,255,0.01), rgba(255,255,255,0.00));
+      padding:18px;
+      border-radius:12px;
+      border:1px solid rgba(255,255,255,0.03);
+    }
+    form{display:flex;flex-direction:column; gap:12px}
+    label{font-size:0.85rem; color:#cfe8ea;}
+    input[type="text"], input[type="tel"], select, textarea{
+      width:100%;
+      padding:10px 12px;
+      border-radius:8px;
+      border:1px solid rgba(255,255,255,0.04);
+      background:var(--glass);
+      color:inherit;
+      font-size:0.95rem;
+      outline:none;
+    }
+    input:focus, select:focus, textarea:focus{ box-shadow: 0 0 0 4px rgba(14,165,164,0.08); border-color: rgba(14,165,164,0.6); }
+    .small{font-size:0.82rem;color:var(--muted)}
+    .row{display:flex;gap:10px}
+    .row .col{flex:1}
+    .helper{font-size:0.78rem;color:var(--muted);}
+    .form-actions{display:flex; gap:10px; align-items:center; margin-top:8px}
+    .note{font-size:0.82rem;color:var(--muted); margin-top:8px}
+    .success{
+      padding:16px;
+      border-radius:10px;
+      background:linear-gradient(180deg, rgba(6,30,35,0.5), rgba(6,22,28,0.5));
+      border:1px solid rgba(14,165,164,0.12);
+      color:#c8fff7;
+    }
+    .hidden{display:none}
+    footer{grid-column:1/-1; text-align:center; color:var(--muted); font-size:0.85rem; margin-top:12px}
+    .muted-link{color:var(--muted); text-decoration:none}
+    @media (max-width:880px){
+      .container{grid-template-columns:1fr; padding:18px}
+    }
+  </style>
+</head>
+<body>
+  <main class="container" role="main">
+    <section>
+      <header>
+        <h1>Welcome to MagnetX 🧲</h1>
+        <p>MagnetX is a home for builders, dreamers, jobbers, and everyone shaping the future of Web3. <br>
+
+We connect projects with investors, founders with communities, and people with opportunities.</p>
+        <div class="cta">
+          <a class="btn" href="#apply" id="jumpApply">Join MagnetX today</a>
+          <button class="ghost" id="learnMoreBtn" type="button">Why community matters</button>
+        </div>
+      </header>
+
+      <div class="card" style="margin-top:18px;">
+        <h3 style="margin:0 0 8px 0">How MagnetX helps</h3>
+        <ul style="margin:0 0 12px 16px; color:var(--muted)">
+          <li>Visibility for projects & builders</li>
+          <li>Collaboration channels</li>
+          <li>Educative classes</li>
+        </ul>
+        <p class="small">Fill the short form on the right to request entry, admins review each application before approving. <br>
+<br>
+After submission you'll see a link to request access to our Whatsapp group.</p>
+      </div>
+    </section>
+
+    <aside>
+      <div class="card" id="apply">
+        <h2 style="margin:0 0 6px 0">Join MagnetX</h2>
+        <p class="small" style="margin:0 0 12px 0">Please complete this short form to help us know you better.</p>
+
+        <form id="magnetForm" autocomplete="on" novalidate>
+          <div>
+            <label for="fullName">Full name</label>
+            <input id="fullName" name="fullName" type="text" placeholder="Jane Doe" required aria-required="true" />
+          </div>
+
+          <div class="row">
+            <div class="col">
+              <label for="region">Region / Country</label>
+              <input id="region" name="region" type="text" placeholder="Lagos, Nigeria" required />
+            </div>
+            <div class="col">
+              <label for="phone">Phone (WhatsApp/ Telegram)</label>
+              <input id="phone" name="phone" type="tel" placeholder="+234 801 234 5678" required />
+            </div>
+          </div>
+
+          <div>
+            <label for="niche">Your Web3 niche</label>
+            <select id="niche" name="niche" required>
+              <option value="">Choose a niche…</option>
+              <option>DeFi</option>
+              <option>NFTs</option>
+              <option>DAOs</option>
+              <option>Trading</option>
+              <option>Community</option>
+              <option>Development</option>
+              <option>Other</option>
+            </select>
+            <div class="helper">If "Other", please add details in the reason box below.</div>
+          </div>
+
+          <div class="row">
+            <div class="col">
+              <label for="followers">Follower count (X)</label>
+              <input id="followers" name="followers" type="text" placeholder="e.g., 3.2k / 500" />
+            </div>
+            <div class="col">
+              <label for="shortMode">Short reason mode</label>
+              <select id="shortMode" aria-label="short mode" title="Choose short mode to limit reason to 50 characters">
+                <option value="long" selected>Long (up to 600 chars)</option>
+                <option value="short">Short (max 50 chars)</option>
+              </select>
+            </div>
+          </div>
+
+          <div>
+            <label for="reason">Why do you want to join MagnetX?</label>
+            <textarea id="reason" name="reason" rows="5" placeholder="Tell us in up to 10 sentences (or switch to short mode for 50 chars)" maxlength="600" required></textarea>
+            <div style="display:flex;justify-content:space-between;align-items:center;margin-top:6px">
+              <div class="small">Max: <span id="charLimitDisplay">600</span> chars</div>
+              <div class="small" id="charCount">0 / 600</div>
+            </div>
+            <div class="note">You may use up to 10 sentences (approx). Enable "Short mode" above to restrict to 50 characters.</div>
+          </div>
+
+          <div class="form-actions">
+            <button type="submit" class="btn">Submit application</button>
+            <button id="clearBtn" type="button" class="ghost">Clear</button>
+          </div>
+
+          <div id="formMessage" class="hidden" role="status" aria-live="polite"></div>
+        </form>
+
+        <div style="margin-top:12px;">
+          <small class="helper">By applying you agree to our community rules. Admins review applications and approve requests manually.</small>
+        </div>
+
+        <!-- Admin utilities (client-side): download CSV of saved applicants -->
+        <div style="margin-top:12px; border-top:1px dashed rgba(255,255,255,0.03); padding-top:12px;">
+          <button id="downloadCsv" class="ghost" type="button">Download saved applicants (CSV)</button>
+          <small class="helper" style="display:block;margin-top:8px"> </small>
+        </div>
+      </div>
+
+      <!-- confirmation / redirect card (hidden until submit) -->
+      <div id="afterSubmit" class="card hidden" style="margin-top:14px;">
+        <div class="success">
+          <strong>Thanks — your application has been recorded.</strong>
+          <p class="small" style="margin:8px 0 0 0">Click the button below to request access to our Whatsapp group. Admins will review your application and approve when ready.</p>
+        </div>
+
+        <div style="margin-top:12px; display:flex; gap:10px; align-items:center;">
+          <!-- Replace the href below with your Telegram invite link -->
+          <a id="tgJoinBtn" class="btn" href="https://t.me/joinchat/REPLACE_WITH_YOUR_INVITE" target="_blank" rel="noopener noreferrer">Join the MagnetX Community Group</a>
+          <a id="returnBtn" class="ghost" href="#" role="button">Return to form</a>
+        </div>
+
+        <div class="note" style="margin-top:10px">If you don't see the group because requests are pending, wait for admin approval in Whatsapp.</div>
+      </div>
+
+    </aside>
+
+    <footer>
+      <div>Built with care by MagnetX · <a class="muted-link" href="#" onclick="alert('Replace this link with your rules or privacy policy URL')">Community rules & privacy</a></div>
+    </footer>
+  </main>
+
+  <script>
+    // Config: replace with your real Telegram invite link or Form endpoint / Airtable details.
+    const TELEGRAM_INVITE = "https://t.me/joinchat/REPLACE_WITH_YOUR_INVITE";
+    // Optional: put a real Google Form action URL if you want to forward submissions to Google Forms
+    const GOOGLE_FORM_ACTION = ""; // e.g. "https://docs.google.com/forms/d/e/FORM_ID/formResponse"
+    // Optional Airtable config: fill these values to auto-send submissions to Airtable
+    const AIRTABLE_CONFIG = {
+      enabled: false,
+      apiKey: "YOUR_AIRTABLE_API_KEY",
+      baseId: "YOUR_BASE_ID",
+      tableName: "Applicants"
+    };
+
+    // Elements
+    const form = document.getElementById("magnetForm");
+    const charCount = document.getElementById("charCount");
+    const reason = document.getElementById("reason");
+    const charLimitDisplay = document.getElementById("charLimitDisplay");
+    const shortMode = document.getElementById("shortMode");
+    const afterSubmit = document.getElementById("afterSubmit");
+    const formMessage = document.getElementById("formMessage");
+    const tgJoinBtn = document.getElementById("tgJoinBtn");
+    const downloadCsvBtn = document.getElementById("downloadCsv");
+    const clearBtn = document.getElementById("clearBtn");
+    const returnBtn = document.getElementById("returnBtn");
+    const jumpApply = document.getElementById("jumpApply");
+    const learnMoreBtn = document.getElementById("learnMoreBtn");
+
+    // Set invite href
+    tgJoinBtn.href = TELEGRAM_INVITE;
+
+    // Character tracking
+    function updateCharCount() {
+      const max = reason.getAttribute("maxlength");
+      charCount.textContent = reason.value.length + " / " + max;
+    }
+    reason.addEventListener("input", updateCharCount);
+
+    // Short mode toggle
+    shortMode.addEventListener("change", () => {
+      if (shortMode.value === "short") {
+        reason.setAttribute("maxlength", "50");
+        charLimitDisplay.textContent = "50";
+      } else {
+        reason.setAttribute("maxlength", "600");
+        charLimitDisplay.textContent = "600";
+      }
+      updateCharCount();
+    });
+
+    // simple phone validation helper
+    function validPhone(value) {
+      // allow +, numbers, spaces, hyphens, parentheses; require at least 7 digits
+      const digits = value.replace(/[^0-9]/g, "");
+      return digits.length >= 7;
+    }
+
+    // Save and optionally forward function
+    async function submitData(dataObj) {
+      // If GOOGLE_FORM_ACTION is provided, post to it (Expected inputs would need mapping)
+      if (GOOGLE_FORM_ACTION) {
+        try {
+          // This sample will attempt a form POST. Mapping field names to form entry IDs must be done by user.
+          await fetch(GOOGLE_FORM_ACTION, {
+            method: "POST",
+            headers: { "Content-Type": "application/x-www-form-urlencoded" },
+            body: new URLSearchParams(dataObj).toString()
+          });
+        } catch (e) {
+          console.warn("Google Form forward failed:", e);
+        }
+      }
+
+      // If Airtable enabled - send to Airtable (CORS may block from browser in many setups)
+      if (AIRTABLE_CONFIG.enabled) {
+        try {
+          const rec = { fields: {} };
+          Object.keys(dataObj).forEach(k => rec.fields[k] = dataObj[k]);
+          await fetch(`https://api.airtable.com/v0/${AIRTABLE_CONFIG.baseId}/${encodeURIComponent(AIRTABLE_CONFIG.tableName)}`, {
+            method: "POST",
+            headers: {
+              "Authorization": "Bearer " + AIRTABLE_CONFIG.apiKey,
+              "Content-Type": "application/json"
+            },
+            body: JSON.stringify(rec)
+          });
+        } catch (e) {
+          console.warn("Airtable forward failed:", e);
+        }
+      }
+
+      // Always save to localStorage as a backup
+      try {
+        const stored = JSON.parse(localStorage.getItem("magnetx_applicants") || "[]");
+        stored.push(dataObj);
+        localStorage.setItem("magnetx_applicants", JSON.stringify(stored));
+      } catch (e) {
+        console.error("Saving to localStorage failed", e);
+      }
+    }
+
+    // Helper: download CSV of saved applicants
+    function downloadCSV() {
+      const stored = JSON.parse(localStorage.getItem("magnetx_applicants") || "[]");
+      if (!stored.length) {
+        alert("No saved applicants in localStorage.");
+        return;
+      }
+      const keys = Object.keys(stored[0]);
+      const rows = [keys.join(",")].concat(stored.map(r => keys.map(k => {
+        const v = (r[k] ?? "").toString().replace(/"/g, '""');
+        return `"${v}"`;
+      }).join(",")));
+      const csv = rows.join("\n");
+      const blob = new Blob([csv], { type: "text/csv;charset=utf-8;" });
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement("a");
+      a.href = url;
+      a.download = "magnetx_applicants.csv";
+      document.body.appendChild(a);
+      a.click();
+      a.remove();
+      URL.revokeObjectURL(url);
+    }
+
+    downloadCsvBtn.addEventListener("click", downloadCSV);
+
+    clearBtn.addEventListener("click", () => {
+      if (confirm("Clear all form fields?")) form.reset();
+      reason.setAttribute("maxlength", "600");
+      charLimitDisplay.textContent = "600";
+      updateCharCount();
+    });
+
+    returnBtn.addEventListener("click", (e) => {
+      e.preventDefault();
+      afterSubmit.classList.add("hidden");
+      document.getElementById("magnetForm").classList.remove("hidden");
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    });
+
+    jumpApply.addEventListener("click", (e) => {
+      e.preventDefault();
+      document.getElementById("apply").scrollIntoView({ behavior: 'smooth' });
+    });
+
+    learnMoreBtn.addEventListener("click", () => {
+      alert("Communities turn strangers into collaborators. MagnetX amplifies visibility, feedback, and opportunity — weekly sessions, educative classes, and channels to introduce you to investors & builders.");
+    });
+
+    // Form submit handler
+    form.addEventListener("submit", async (evt) => {
+      evt.preventDefault();
+      formMessage.className = "hidden";
+      // collect values
+      const payload = {
+        fullName: document.getElementById("fullName").value.trim(),
+        region: document.getElementById("region").value.trim(),
+        phone: document.getElementById("phone").value.trim(),
+        niche: document.getElementById("niche").value,
+        followers: document.getElementById("followers").value.trim(),
+        reason: reason.value.trim(),
+        shortMode: shortMode.value,
+        timestamp: new Date().toISOString()
+      };
+
+      // Basic validation
+      if (!payload.fullName) return showMessage("Please enter your full name.", true);
+      if (!payload.region) return showMessage("Please enter your region or country.", true);
+      if (!payload.phone || !validPhone(payload.phone)) return showMessage("Please enter a valid phone number (WhatsApp/Telegram).", true);
+      if (!payload.niche) return showMessage("Please select your Web3 niche.", true);
+      if (!payload.reason) return showMessage("Tell us why you want to join MagnetX.", true);
+      if (payload.shortMode === "short" && payload.reason.length > 50) return showMessage("Short mode requires 50 characters or fewer.", true);
+      if (payload.reason.length > 600) return showMessage("Reason is too long. Please shorten it.", true);
+
+      // Disable submit
+      const submitBtn = form.querySelector("button[type='submit']");
+      submitBtn.disabled = true;
+      submitBtn.textContent = "Submitting…";
+
+      try {
+        await submitData(payload);
+        // success UI
+        form.classList.add("hidden");
+        afterSubmit.classList.remove("hidden");
+        showMessage("", false); // clear
+        window.scrollTo({ top: document.body.scrollHeight, behavior: "smooth" });
+      } catch (e) {
+        console.error(e);
+        showMessage("Submission failed. Please try again.", true);
+      } finally {
+        submitBtn.disabled = false;
+        submitBtn.textContent = "Submit application";
+      }
+    });
+
+    function showMessage(msg, isError) {
+      if (!msg) {
+        formMessage.className = "hidden";
+        formMessage.textContent = "";
+        return;
+      }
+      formMessage.className = isError ? "card" : "success";
+      formMessage.style.marginTop = "12px";
+      formMessage.textContent = msg;
+    }
+
+    // On load char count
+    updateCharCount();
+
+    // Optional: prefill phone with country code if you want
+    // document.getElementById("phone").value = "+234 ";
+  </script>
+
+  <!--
+  Integration tips (replace placeholders and remove comments):
+  1) Google Forms: create a Google Form, inspect input names (entry.xxxxx), set GOOGLE_FORM_ACTION above to the formResponse URL and map payload keys to those entry IDs when building URLSearchParams.
+
+  2) Typeform: embed via iframe or use Typeform's redirect after submit to the Telegram invite. You can embed with <iframe src="https://form.typeform.com/to/FORM_ID" ...></iframe>
+
+  3) Airtable: set AIRTABLE_CONFIG.enabled = true and fill apiKey/baseId/tableName. Note CORS may block direct browser requests; use a server-side proxy or serverless function for production.
+
+  4) Server / Notion: for production you should forward submissions to a backend (serverless function) which stores in Airtable/Notion and triggers notifications to admins.
+
+  5) Telegram redirect: Telegram join links look like https://t.me/joinchat/<token> or https://t.me/+<token>. Replace TELEGRAM_INVITE at top with your real link.
+  -->
+</body>
+</html>
